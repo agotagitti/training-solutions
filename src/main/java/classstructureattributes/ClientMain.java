@@ -13,7 +13,7 @@ public class ClientMain {
 
         System.out.println("Year of birth?");
         client.year = scanner.nextInt();
-        client.address = scanner.nextLine(); //enélkül az Address kérdést skippeli
+        client.address = scanner.nextLine(); //enélkül az Address érték bekérését skippeli
 
         System.out.println("Address?");
         client.address = scanner.nextLine();
