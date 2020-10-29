@@ -16,3 +16,4 @@ public class NoteMain {
     }
 
 }
+//Scanner használtával is lehetne tesztelni, ahol a konzolról kapnának értéket az attribútumok
