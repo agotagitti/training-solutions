@@ -9,7 +9,8 @@ public class DivByThree {
         System.out.println("Give me a whole number!");
         int number = scanner.nextInt();
 
-        System.out.println("Can divide by 3: " + (number % 3 == 0 ? true : false));
+        System.out.println("Can divide by 3: " + (number % 3 == 0));
+        System.out.println((number % 3 == 0 ? "Can divide" : "Can't divide") + " by 3");
 
 
     }
