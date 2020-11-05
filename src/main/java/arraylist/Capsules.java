@@ -48,5 +48,11 @@ public class Capsules {
         test.removeLast();
 
         System.out.println(test.getColors());
+
+        List<String> newColors = test.getColors();
+
+        newColors.clear();
+
+        System.out.println(newColors);
     }
 }
