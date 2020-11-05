@@ -7,7 +7,7 @@ public class InputNames {
     public static void main(String[] args) {
         String[] names = new String [5];
         for (int i = 0; i < names.length; i++) {
-            System.out.println("Give me a name");
+            System.out.println("Kérek egy nevet");
             Scanner scanner = new Scanner(System.in);
             names[i] = scanner.nextLine();
         }
