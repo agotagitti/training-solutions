@@ -54,5 +54,6 @@ public class Capsules {
         newColors.clear();
 
         System.out.println(newColors);
+        System.out.println(test.getColors());
     }
 }
