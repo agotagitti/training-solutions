@@ -12,5 +12,4 @@ public class TaxCalculator {
     public double priceWithTax(double price) {
         return price + (price * VAT_PERCENT);
     }
-
 }
