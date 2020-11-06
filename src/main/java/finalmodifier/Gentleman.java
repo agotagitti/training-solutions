@@ -8,5 +8,4 @@ public class Gentleman {
         return (MESSAGE_PREFIX + name);
     }
 
-
 }
