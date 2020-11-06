@@ -16,7 +16,7 @@ public class Week {
 
         //DAYSOFWEEK = Arrays.asList("x", "y");
 
-
+        final int i;
     }
 
 }
