@@ -18,5 +18,4 @@ public class Week {
 
         final int i;
     }
-
 }
