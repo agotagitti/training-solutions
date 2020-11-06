@@ -14,5 +14,10 @@ public class PiMain {
 
         System.out.println(CircleCalculator.PI);
 
+        System.out.println();
+        CircleCalculator test = new CircleCalculator();
+
+        System.out.println(test.calculatePerimeter(10.0));
+
     }
 }
