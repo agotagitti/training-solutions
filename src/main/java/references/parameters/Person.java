@@ -2,7 +2,6 @@ package references.parameters;
 
 public class Person {
 
-    //az a dolga, hogy egy személy nevét és életkorát kezelje
     private String name;
     private int age;
 
