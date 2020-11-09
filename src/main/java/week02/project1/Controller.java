@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Controller {
 
     private Office office;
-   private Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         Controller controller = new Controller();
@@ -19,7 +18,7 @@ public class Controller {
 
         public void readOffice() {
             this.office = new Office();
-
+            Scanner scanner = new Scanner(System.in);
 
             System.out.println("Number of meeting rooms:");
             int numberOfMeetingRoom = scanner.nextInt();
@@ -41,14 +40,15 @@ public class Controller {
         public void printMenu() {
             System.out.println("1. Meeting rooms in order");
             System.out.println("2. Meeting room in reverse order");
-            System.out.println("3. Minden második tárgyaló");
-            System.out.println("4. Területek");
-            System.out.println("5. Keresés pontos név alapján");
-            System.out.println("6. Keresés névtöredék alapján");
-            System.out.println("7. Keresés terület alapján" + '\n');
+            System.out.println("3. Every second meeting room");
+            System.out.println("4. Areas of meeting rooms");
+            System.out.println("5. Search using exact meeting room name");
+            System.out.println("6. Search using part of meeting room name");
+            System.out.println("7. Search by area of meeting rooms" + '\n');
         }
 
         public void runMenu() {
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Give me a number:");
             int menuNumber = scanner.nextInt();
             scanner.nextLine();
@@ -77,7 +77,7 @@ public class Controller {
                 office.printAreasLargerThan(scanner.nextInt());
                 scanner.nextLine();
             }
-            if (menuNumber < 7) {
+            if (menuNumber > 7) {
                 System.out.println("Invalid menu");
             }
         }
@@ -85,3 +85,4 @@ public class Controller {
 
 
 }
+
