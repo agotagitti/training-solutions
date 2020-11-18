@@ -63,7 +63,7 @@ public class NameBuilder {
         //name: Dr. Prof. John G Smith
         //delete: "Prof. "
         StringBuilder nameWithoutTitle = new StringBuilder(name);
-        int del = name.indexOf(delete);
+        int del = nameWithoutTitle.indexOf(delete);
         nameWithoutTitle.delete(del, delete.length() + del);
         return nameWithoutTitle.toString();
     }
