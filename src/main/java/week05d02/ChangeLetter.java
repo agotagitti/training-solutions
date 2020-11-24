@@ -2,7 +2,7 @@ package week05d02;
 
 public class ChangeLetter {
 
-    private String toChange = "aeiou";
+    public static final String TOCHANGE = "aeiou";
 
     public String changeVowels(String string) {
         char actual;
@@ -10,7 +10,7 @@ public class ChangeLetter {
         try {
             for (int i = 0; i < string.length(); i++) {
                 actual = string.toLowerCase().charAt(i);
-                if (toChange.indexOf(actual) >= 0) {
+                if (TOCHANGE.indexOf(actual) >= 0) {
                     result += "*";
                 } else {
                     result += string.charAt(i);
