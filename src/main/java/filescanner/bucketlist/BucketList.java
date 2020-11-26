@@ -17,6 +17,6 @@ public class BucketList {
         catch (IOException ioException) {
             throw new IllegalStateException("Cannot read file", ioException);
         }
-
     }
+
 }
