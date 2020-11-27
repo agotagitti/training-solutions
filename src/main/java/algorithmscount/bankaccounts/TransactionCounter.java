@@ -4,10 +4,10 @@ import java.util.List;
 
 public class TransactionCounter {
 
-    public int countEntryLessThan(List<Transaction> transactions, int amountMax) {
+    public int countEntryLessThan(List<Transaction> transactions, int amountMin) {
         int counter = 0;
         for (Transaction actual: transactions) {
-            if (actual.getAmount() < amountMax) {
+            if (actual.getAmount() < amountMin) {
                 counter++;
             }
         }
