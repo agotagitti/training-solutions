@@ -1,3 +1,5 @@
+//nincs kész
+
 package schoolrecords;
 
 import java.util.*;
