@@ -20,4 +20,7 @@ public class Store {
         return counter;
     }
 
+    public List<Product> getProducts() {
+        return products;
+    }
 }
