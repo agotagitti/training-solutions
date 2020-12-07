@@ -1,21 +1,19 @@
 package week07d01;
 
-import immutable.satellite.CelestialCoordinates;
-import immutable.satellite.Satellite;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class MathAlgorithmsTest {
 
     @Test
     public void testIsPrime() {
 
-        assertEquals(false, MathAlgorithms.isPrime(1));
-        assertEquals(true, MathAlgorithms.isPrime(2));
-        assertEquals(false, MathAlgorithms.isPrime(9));
-        assertEquals(true, MathAlgorithms.isPrime(13));
+        assertFalse(MathAlgorithms.isPrime(1));
+        assertTrue(MathAlgorithms.isPrime(2));
+        assertFalse(MathAlgorithms.isPrime(9));
+        assertTrue(MathAlgorithms.isPrime(13));
     }
 
 }
