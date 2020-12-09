@@ -6,8 +6,8 @@ import java.util.List;
 public class NumberList {
 
     public boolean isIncreasing(List<Integer> integerList) {
-        if (integerList == null) {
-            throw new IllegalArgumentException("List cannot be null");
+        if (integerList == null || integerList.isEmpty()) {
+            throw new IllegalArgumentException("Argument is not valid");
         }
         int numberToCompare = 0;
         for (Integer actual: integerList) {
