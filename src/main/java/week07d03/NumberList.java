@@ -6,16 +6,17 @@ import java.util.List;
 public class NumberList {
 
     public boolean isIncreasing(List<Integer> integerList) {
+        if (integerList == null) {
+            throw new IllegalArgumentException("List cannot be null");
+        }
         int numberToCompare = 0;
-        boolean increasing = true;
         for (Integer actual: integerList) {
             if (actual < numberToCompare) {
-                increasing = false;
-                break;
+                return false;
             }
             numberToCompare = actual;
         }
-        return increasing;
+        return true;
     }
 
 }
