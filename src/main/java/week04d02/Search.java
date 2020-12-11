@@ -1,12 +1,12 @@
-package week04;
+package week04d02;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Search {
     public static void main(String[] args) {
-        Main main = new Main();
-        System.out.println(main.getIndexesOfChar("abcdefa", 'a'));
+        Search search = new Search();
+        System.out.println(search.getIndexesOfChar("abcdefa", 'a'));
 
     }
 
