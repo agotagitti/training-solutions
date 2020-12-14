@@ -1,6 +1,7 @@
 package inheritancemethods.products;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class PackedProduct extends Product {
 
@@ -18,7 +19,8 @@ public class PackedProduct extends Product {
         return super.totalWeight(pieces).
                 add(BigDecimal.
                         valueOf(Math.ceil((double) pieces / packingUnit)).
-                        multiply(weightOfBox));
+                        multiply(weightOfBox).
+                        setScale(getNumberOfDecimals(), RoundingMode.HALF_UP));
     }
 
     public int getPackingUnit() {
