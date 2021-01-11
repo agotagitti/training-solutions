@@ -13,6 +13,7 @@ class DivisorFinderTest {
         assertEquals(1, df.findDivisor(425));
         assertEquals(0, df.findDivisor(29));
         assertEquals(3, df.findDivisor(649789105));
+        assertEquals(2, df.findDivisor(-15));
 
 
     }

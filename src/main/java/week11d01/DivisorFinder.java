@@ -4,7 +4,7 @@ public class DivisorFinder {
 
     public int findDivisor(int n) {
         int counter = 0;
-        int number = n;
+        int number = Math.abs(n);
         while (number > 0) {
             if ((number % 10 != 0) && (n % (number % 10) == 0)) {
                 counter++;
