@@ -1,7 +1,6 @@
 package week10d02;
 
 import org.junit.jupiter.api.Test;
-import weekd10d02.MaxTravel;
 
 import java.util.List;
 

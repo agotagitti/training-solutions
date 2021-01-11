@@ -1,4 +1,4 @@
-package weekd10d02;
+package week10d02;
 
 import java.util.List;
 
