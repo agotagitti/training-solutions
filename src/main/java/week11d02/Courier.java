@@ -55,7 +55,7 @@ public class Courier {
                 return i;
             }
         }
-        return 0;
+        return -1;
     }
 
     public List<Ride> getRides() {
