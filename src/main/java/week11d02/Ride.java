@@ -7,8 +7,13 @@ public class Ride {
     private double km;
 
     public Ride(int dayNumber, int rideNumber, double km) {
-        //day number
+        if (dayNumber < 1 || dayNumber > 7) {
+            throw new IllegalArgumentException("Incorrect day");
+        }
         this.dayNumber = dayNumber;
+        if (rideNumber < 1) {
+            throw new IllegalArgumentException("Incorrect ride");
+        }
         this.rideNumber = rideNumber;
         if (km == 0.0) {
             throw new IllegalArgumentException("Invalid km");
