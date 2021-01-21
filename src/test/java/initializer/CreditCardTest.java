@@ -1,4 +1,4 @@
-package initalizer;
+package initializer;
 
 import org.junit.jupiter.api.Test;
 
