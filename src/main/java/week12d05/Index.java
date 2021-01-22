@@ -7,13 +7,13 @@ import java.nio.file.Path;
 
 public class Index {
 
-    public int coronaCounter() {
+    public int coronaCounter(String word) {
         Path path = Path.of("index.html");
         int counter = 0;
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String line;
             while ((line = reader.readLine()) != null) {
-                if (line.toLowerCase().contains("koronavírus")) {
+                if (line.toLowerCase().contains(word)) {
                     counter++;
                 }
             }
@@ -25,7 +25,7 @@ public class Index {
 
     public static void main(String[] args) {
         Index index = new Index();
-        System.out.println(index.coronaCounter());
+        System.out.println(index.coronaCounter("koronavírus"));
 
     }
 }
