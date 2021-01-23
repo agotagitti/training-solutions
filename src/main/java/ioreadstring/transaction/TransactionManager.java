@@ -25,10 +25,10 @@ public class TransactionManager {
                 accountList.add(bankAccount);
             }
         } catch (IOException e) {
-            throw new IllegalStateException("Cannot read file");
+            throw new IllegalStateException("Cannot read file", e);
         }
         catch (NumberFormatException nfe) {
-            throw new IllegalArgumentException("Invalid transaction amount");
+            throw new IllegalArgumentException("Invalid transaction amount", nfe);
         }
     }
 
@@ -41,10 +41,10 @@ public class TransactionManager {
                 findBankAccount(transElements[0]).setBalance(Integer.parseInt(transElements[1]));
             }
         } catch (IOException e) {
-            throw new IllegalStateException("Cannot read file");
+            throw new IllegalStateException("Cannot read file", e);
         }
         catch (NumberFormatException nfe) {
-            throw new IllegalArgumentException("Invalid transaction amount");
+            throw new IllegalArgumentException("Invalid transaction amount", nfe);
         }
     }
 
