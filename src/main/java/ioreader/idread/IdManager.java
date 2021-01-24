@@ -18,8 +18,8 @@ public class IdManager {
             while ((line = bufferedReader.readLine()) != null) {
                 ids.add(line);
             }
-        } catch (IOException e) {
-            throw new IllegalStateException("Cannot read file");
+        } catch (IOException ioe) {
+            throw new IllegalStateException("Cannot read file", ioe);
         }
     }
 
