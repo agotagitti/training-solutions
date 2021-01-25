@@ -30,17 +30,12 @@ public class ResultCalculator {
         try (BufferedReader br = Files.newBufferedReader(votesFile)) {
             String line;
             while((line = br.readLine()) != null) {
-                boolean foundVote = false;
-                for(Vote actual: votes) {
-                    if (actual.getId() == Integer.parseInt(line)) {
-                        actual.incNum();
-                        foundVote = true;
-                    }
-                }
-                if (!foundVote) {
-                    votes.add(new Vote(Integer.parseInt(line), 1));
-                }
-
+                Vote vote = getVoteForProduction(Integer.parseInt(line));
+               if (vote == null) {
+                   vote = new Vote(Integer.parseInt(line), 0);
+                   votes.add(vote);
+               }
+               vote.incNum();
             }
         } catch (IOException e) {
             throw new IllegalStateException("Cannot read file", e);
@@ -53,10 +48,9 @@ public class ResultCalculator {
             String winnerProductName = "";
             for (Production actualProds : productions) {
                 int voteNumber = 0;
-                for (Vote actualVotes : votes) {
-                    if (actualProds.getId() == actualVotes.getId()) {
-                        voteNumber = actualVotes.getNumber();
-                    }
+                Vote vote = getVoteForProduction(actualProds.getId());
+                if (vote != null) {
+                    voteNumber = vote.getNumber();
                 }
                 if (voteNumber > mostVoteNumber) {
                     mostVoteNumber = voteNumber;
@@ -69,6 +63,15 @@ public class ResultCalculator {
         catch (IOException ioe) {
             throw new IllegalStateException("Cannot write file", ioe);
         }
+    }
+
+    private Vote getVoteForProduction(int prodId) {
+        for (Vote actualVote : votes) {
+            if (prodId == actualVote.getId()) {
+                return actualVote;
+            }
+        }
+        return null;
     }
 
     public List<Production> getProductions() {
