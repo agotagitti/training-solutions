@@ -1,13 +1,15 @@
 package week13d02;
 
+import java.time.LocalTime;
+
 public class Airplane {
 
     private String flightNumber;
     private Bound arrivalDeparture;
     private String destination;
-    private String time;
+    private LocalTime time;
 
-    public Airplane(String flightNumber, Bound arrivalDeparture, String destination, String time) {
+    public Airplane(String flightNumber, Bound arrivalDeparture, String destination, LocalTime time) {
         this.flightNumber = flightNumber;
         this.arrivalDeparture = arrivalDeparture;
         this.destination = destination;
@@ -26,7 +28,12 @@ public class Airplane {
         return destination;
     }
 
-    public String getTime() {
+    public LocalTime getTime() {
         return time;
+    }
+
+    @Override
+    public String toString() {
+        return "Airplane: " + flightNumber + ", " + arrivalDeparture + ", " + destination + ", " + time;
     }
 }
