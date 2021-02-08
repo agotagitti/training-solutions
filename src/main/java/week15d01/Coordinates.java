@@ -6,6 +6,9 @@ import java.util.Map;
 public class Coordinates {
 
     public Map.Entry<Integer, Integer> getMaxPlace(Map<Integer, Integer> data) {
+        if (data.size() == 0) {
+            throw new IllegalArgumentException("Wrong argument!");
+        }
         Map.Entry<Integer, Integer> result = null;
         for (Map.Entry<Integer, Integer> actual: data.entrySet()) {
             if (result == null || (actual.getValue() > result.getValue())) {
