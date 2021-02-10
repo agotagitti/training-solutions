@@ -13,7 +13,7 @@ public class ClassNoteBook {
         this.students = students;
     }
 
-    public Map<String, Map<String, List<Integer>>> sortNoteBook() {
+    public Map<String, Map<String, List<Integer>>> sortNotebook() {
         Map<String, Map<String, List<Integer>>> sortedStudentList = new TreeMap<>();
         for (Student actual: students) {
             sortedStudentList.put(actual.getName(), actual.getMarks());
@@ -38,7 +38,7 @@ public class ClassNoteBook {
 
 
         ClassNoteBook classNoteBook = new ClassNoteBook(students);
-        System.out.println(classNoteBook.sortNoteBook().toString());
+        System.out.println(classNoteBook.sortNotebook().toString());
     }
 
 }
