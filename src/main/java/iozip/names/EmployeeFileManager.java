@@ -1,4 +1,4 @@
-package oizip.names;
+package iozip.names;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
