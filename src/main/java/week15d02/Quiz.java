@@ -74,23 +74,13 @@ public class Quiz {
 
     public static void main(String[] args) {
         Quiz quiz = new Quiz();
-        Path path = Path.of("src/main/resources/kerdesek.txt");
-        quiz.readQuizDataFromFile(path);
-        System.out.println(quiz.getQuizData().size());
-        System.out.println(quiz.getQuizData().get(56));
 
-        List<String> questions = quiz.getQuestionsByCategory("tortenelem");
-        System.out.println(questions);
-        System.out.println(questions.size());
 
-        Random random = new Random(5);
-        System.out.println(quiz.getRandomQuizData(random));
 
-        Map<String, List<QuizData>> questionsAsKeys = quiz.getQuestionsAsKeys();
-        System.out.println(questionsAsKeys.size());
-        System.out.println(questionsAsKeys.containsKey("tortenelem"));
 
-        System.out.println(quiz.getMostPoints());
+
+
+
 
     }
 
