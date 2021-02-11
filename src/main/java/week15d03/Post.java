@@ -11,15 +11,9 @@ public class Post {
     private String owner;
 
     public Post(String title, LocalDate publishedAt, LocalDate deletedAt, String content, String owner) {
-        if (publishedAt.isAfter(LocalDate.now()) || publishedAt.isEqual(LocalDate.now())) {
-            throw new IllegalArgumentException("Invalid publishing date");
-        }
-        if (content.isEmpty() || title.isEmpty()) {
-            throw new IllegalArgumentException("Invalid argument");
-        }
+        this.title = title;
         this.publishedAt = publishedAt;
         this.deletedAt = deletedAt;
-        this.title = title;
         this.content = content;
         this.owner = owner;
     }
