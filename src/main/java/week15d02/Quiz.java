@@ -72,16 +72,5 @@ public class Quiz {
         return new ArrayList<>(quizData);
     }
 
-    public static void main(String[] args) {
-        Quiz quiz = new Quiz();
-
-
-
-
-
-
-
-
-    }
 
 }
