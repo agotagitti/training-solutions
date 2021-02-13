@@ -1,7 +1,6 @@
 package week15d04;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -12,12 +11,8 @@ public class CovidStatistics {
 
     private List<WeeklyData> weeklyDataList = new ArrayList<>();
 
-    public List<WeeklyData> getWeeklyDataList() {
-        return new ArrayList<>(weeklyDataList);
-    }
-
     public void readLineFromFile() {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(FileReader.class.getResourceAsStream("data.csv")))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(CovidStatistics.class.getResourceAsStream("/covid_data.csv")))) {
             String line;
             while ((line = reader.readLine())  != null) {
                 if (line.contains("Hungary")) {
@@ -48,6 +43,12 @@ public class CovidStatistics {
         List<WeeklyData> sortedWeeklyData = new ArrayList<>(weeklyDataList);
         Collections.sort(sortedWeeklyData);
         return sortedWeeklyData;
+    }
+
+    public static void main(String[] args) {
+        CovidStatistics covidStatistics = new CovidStatistics();
+        covidStatistics.readLineFromFile();
+        System.out.println(covidStatistics.worstThreeWeeks());
     }
 
 }
