@@ -9,7 +9,7 @@ public class Library {
     private List<Book> books = new ArrayList<>();
 
     public void loadFromFile() {
-        Scanner scanner = new Scanner(Library.class.getResourceAsStream("/books.csv")).useDelimiter(";|(\r\n)");
+        Scanner scanner = new Scanner(Library.class.getResourceAsStream("/books_.csv")).useDelimiter(";|(\r\n)");
             while (scanner.hasNextLine()) {
                 String regNum = scanner.next();
                 String author = scanner.next();
