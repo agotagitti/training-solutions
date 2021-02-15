@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
+
 public class VowelFilter {
 
     private static final String CONSONANTS = "bcdfghjklmnpqrstvwxyz";
