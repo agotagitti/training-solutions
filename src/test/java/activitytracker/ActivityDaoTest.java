@@ -36,7 +36,7 @@ class ActivityDaoTest {
     }
 
     @Test
-    public void testSaveLoadActivities() {
+    void testSaveLoadActivities() {
         Activity ac1 = new Activity(LocalDateTime.of(2019, 6, 6, 10, 30), "Budai tura", ActivityType.HIKING);
         Activity ac2 = new Activity(LocalDateTime.of(2020, 4, 10, 6, 30), "Napi futas", ActivityType.RUNNING);
         Activity ac3 = new Activity(LocalDateTime.of(2021, 2, 20, 14, 15), "Teli bringaut", ActivityType.BIKING);
@@ -49,7 +49,7 @@ class ActivityDaoTest {
     }
 
     @Test
-    public void testFindActivityById() {
+    void testFindActivityById() {
         Activity ac1 = new Activity(LocalDateTime.of(2019, 6, 6, 10, 30), "Budai tura", ActivityType.HIKING);
         Activity ac2 = new Activity(LocalDateTime.of(2020, 4, 10, 6, 30), "Napi futas", ActivityType.RUNNING);
         Activity ac3 = new Activity(LocalDateTime.of(2021, 2, 20, 14, 15), "Teli bringaut", ActivityType.BIKING);
