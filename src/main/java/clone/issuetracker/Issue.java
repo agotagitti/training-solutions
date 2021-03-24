@@ -22,8 +22,7 @@ public class Issue {
         this.time = issue.time;
         this.status = issue.status;
         if (copyMode.equals(CopyMode.WITH_COMMENTS)) {
-            List<Comment> tempComment = new ArrayList<>(issue.comments);
-            for(Comment actualComment : tempComment) {
+            for(Comment actualComment : issue.comments) {
                 comments.add(new Comment(actualComment));
             }
         }
