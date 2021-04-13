@@ -1,0 +1,6 @@
+bread;2;500
+milk;5;300
+tomato;10;80
+apple;3;400
+butter;1;1000
+chocolate;2;600
